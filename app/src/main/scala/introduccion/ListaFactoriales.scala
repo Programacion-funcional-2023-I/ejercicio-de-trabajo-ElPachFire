@@ -7,11 +7,11 @@ class ListaFactoriales {
         val objFactorial: Factorial = new Factorial()
         //Complete el código
         for (i <-0 to n){
-            val factorial: bigInt = objFactorial.calculateFactorial(i)
-            listafactoriales = listaFactoriales + listaFactoriales
-
+            val factorial: BigInt = objFactorial.calculateFactorial(i)
+            listaFactoriales = listaFactoriales :+ factorial
         }
         listaFactoriales
     }
 }
+
 

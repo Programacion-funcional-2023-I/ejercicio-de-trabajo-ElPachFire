@@ -15,7 +15,7 @@ class EjercicioListas {
     var listaRepetida : List[List[Int]] = List()
     //Complete el código
     require ( n >= 0, "Solo numeros positivos, no se admiten numeros negativos")
-    //Para representar la lista se usa "lista" (valga la rebundancia)
+    //Para representar la lista se usa "lista" (valga la redundancia)
     //También haré uso de .map el cual es un método de las colecciones de Scala el
     //cual se utiliza para transformar cada elemento de una colección aplicando
     // una función a cada uno de ellos.

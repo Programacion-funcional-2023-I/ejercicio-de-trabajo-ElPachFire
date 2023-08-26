@@ -6,6 +6,12 @@ class ListaFactoriales {
         var listaFactoriales : List[BigInt] = List()
         val objFactorial: Factorial = new Factorial()
         //Complete el código
-        throw new UnsupportedOperationException("No implementado aún")
+        for (i <-0 to n){
+            val factorial: bigInt = objFactorial.calculateFactorial(i)
+            listafactoriales = listaFactoriales + listaFactoriales
+
+        }
+        listaFactoriales
     }
 }
+

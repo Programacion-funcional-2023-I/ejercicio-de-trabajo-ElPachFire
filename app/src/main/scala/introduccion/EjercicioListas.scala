@@ -45,8 +45,8 @@ class EjercicioListas {
     criterio match {
       case "mayor" => listaFiltrada = lista.filter (_ > n)
       case "menor" => listaFiltrada = lista.filter (_ < n)
-      case "mayoroigual" => listaFiltrada = lista.filter (_ >= n)
-      case "menoroigual" => listaFiltrada = lista.filter (_ <= n)
+      case "mayor o igual" => listaFiltrada = lista.filter (_ >= n)
+      case "menor o igual" => listaFiltrada = lista.filter (_ <= n)
       case "igual" => listaFiltrada = lista.filter (_ == n)
       case "diferente" => listaFiltrada = lista.filter (_ != n)
       case _ => throw new IllegalArgumentException(s"Criterio desconocido: $criterio")

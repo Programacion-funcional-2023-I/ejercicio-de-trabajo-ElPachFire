@@ -25,7 +25,6 @@ class EjercicioListas {
 
     lista.map(element => List.fill(n)(element))
 
-    throw new UnsupportedOperationException("No implementado aún")
   }
   /*
   * Punto 3: Filtrar listas

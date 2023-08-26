@@ -28,7 +28,8 @@ class EjercicioListas {
   }
   /*
   * Punto 3: Filtrar listas
-  * @param criterioIn Criterio de filtrado que puede ser "mayor", "menor", "mayoroigual", "igual", "diferente" o "menoroigual"
+  * @param criterioIn Criterio de filtrado que puede ser "mayor", "menor", "mayor
+  * oigual", "igual", "diferente" o "menor o igual"
   * @param n Número a comparar
   * @param lista Lista a filtrar
   * @return Lista filtrada de acuerdo al criterio y n
@@ -39,6 +40,30 @@ class EjercicioListas {
     var criterio : String = criterioIn.toLowerCase()
     var listaFiltrada : List[Int] = List()
     //Complete el código
-    throw new UnsupportedOperationException("No implementado aún")
+    //Haré uso de la función criterio match para filtrar la listas
+    //el cual tiene la siguiente forma:
+    criterio match {
+      case "mayor" => listaFiltrada = lista.filter (_ > n)
+      case "menor" => listaFiltrada = lista.filter (_ < n)
+      case "mayor o igual" => listaFiltrada = lista.filter (_ >= n)
+      case "menor o igual" => listaFiltrada = lista.filter (_ <= n)
+      case "igual" => listaFiltrada = lista.filter (_ > n)
+      case "diferente" => listaFiltrada = lista.filter (_ != n)
+      case _ => throw new IllegalArgumentException(s"Criterio desconocido: $criterio")
+
+    }
+  //Se devuelve a listaFiltrada
+    listaFiltrada
   }
 }
+//notas mias
+//¿Para qué se usa (_) en los case de criterio match?
+//Coincidencia de patrones: En una expresión de coincidencia de patrones (match), el guión bajo (_)
+//se utiliza para representar un valor que no necesitas
+//usar explícitamente en esa rama del patrón.
+//Cabe mencionar que tienen otros usos, pero dejaré esta nota para recordarlo solo para este
+//ejercicio.
+
+//Si alguien desea ver de donde saqué estas funciones usadas aqui puede investigar en
+//http://ferestrepoca.github.io/paradigmas-de-programacion/progfun/tutoriales/Scala/codigo.html
+//Si tiene alguna duda puede recurrir a otras paginas o a ChatGpt
